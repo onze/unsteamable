@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>unsteamable</name>
+	<name>Unsteamable</name>
 	<comment></comment>
 	<projects>
+		<project>Steel</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
