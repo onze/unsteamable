@@ -23,7 +23,7 @@ Unsteamable::~Unsteamable()
 
 void Unsteamable::run(void)
 {
-	cout << "Unsteamable::go()" << endl;
+//	cout << "Unsteamable::go()" << endl;
 
 	int width = 800, height = 600;
 
