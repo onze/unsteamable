@@ -7,9 +7,8 @@
 
 #include <iostream>
 
-#include <OgreWindowEventUtilities.h>
-
 #include <Unsteamable.h>
+#include <Level.h>
 
 using namespace std;
 
@@ -22,19 +21,21 @@ Unsteamable::~Unsteamable()
 {
 }
 
-void Unsteamable::go(void)
+void Unsteamable::run(void)
 {
 	cout << "Unsteamable::go()" << endl;
 
-	engine.init("plugins.cfg",false,800,600,"Unsteamable");
+	int width = 800, height = 600;
 
-	while (true)
-	{
-		// Pump window messages for nice behaviour
-		Ogre::WindowEventUtilities::messagePump();
+	mEngine.init("plugins.cfg", false, width, height, "Unsteamable");
 
-		if (engine.renderWindow()->isClosed()) break;
+	//TODO: intro cinematic
+	//TODO: menu: play/options
+	//TODO: for level in levels:
 
-		if (!engine.update()) break;
-	}
+	//load next level
+	Steel::Level level(&mEngine);
+	mEngine.mainLoop();
+	//TODO: ending cinematic
+	//credits
 }

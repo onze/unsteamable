@@ -1,4 +1,4 @@
-#Fri May 06 20:34:52 EDT 2011
+#Sat May 14 01:52:09 EDT 2011
 eclipse.preferences.version=1
 environment/project/cdt.managedbuild.config.gnu.exe.debug.974794459/OGRE_LOC/delimiter=\:
 environment/project/cdt.managedbuild.config.gnu.exe.debug.974794459/OGRE_LOC/operation=append
@@ -11,8 +11,8 @@ environment/project/cdt.managedbuild.config.gnu.exe.debug.974794459/appendContri
 environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/OGRE_LOC/delimiter=\:
 environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/OGRE_LOC/operation=append
 environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/OGRE_LOC/value=/media/z2/src/ogre_src_v1-7-2
-environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/STEEL/delimiter=\:
-environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/STEEL/operation=append
-environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/STEEL/value=/media/z2/cpp/1105/Steel
+environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/STEEL_LOC/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/STEEL_LOC/operation=append
+environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/STEEL_LOC/value=/media/z2/cpp/1105/Steel
 environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/append=true
 environment/project/cdt.managedbuild.config.gnu.exe.release.1773923752/appendContributed=true

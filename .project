@@ -3,7 +3,6 @@
 	<name>Unsteamable</name>
 	<comment></comment>
 	<projects>
-		<project>Steel</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

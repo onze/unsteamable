@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
 	try
 	{
-		usmb.go();
+		usmb.run();
 	}
 	catch (Ogre::Exception& e)
 	{
