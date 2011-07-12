@@ -9,6 +9,8 @@
 #define UNSTEAMABLE_H_
 
 #include <Engine.h>
+
+#include "unsteamabletypes.h"
 #include "InputManager.h"
 
 class Unsteamable
@@ -16,9 +18,11 @@ class Unsteamable
 public:
 	Unsteamable();
 	virtual ~Unsteamable();
-	void run(void);
+	void run();
 protected:
-	Steel::Engine mEngine;
+	Steel::Engine *mEngine;
 };
 
-#endif /* UNSTEAMABLE_H_ */
+#endif
+
+/*UNSTEAMABLE_H_ */

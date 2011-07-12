@@ -6,7 +6,6 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include <OgreRoot.h>
 #include <OgreException.h>
 
 
@@ -15,12 +14,12 @@
 #include "windows.h"
 #endif
 
+#include "Unsteamable.h"
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
-#include "Unsteamable.h"
 
 #if OGRE_PLATFORM == OGRE_PLATFORM_WIN32
 INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE, LPSTR strCmdLine, INT)
@@ -30,7 +29,6 @@ int main(int argc, char *argv[])
 {
 	// Create application object
 	Unsteamable usmb;
-
 	try
 	{
 		usmb.run();
