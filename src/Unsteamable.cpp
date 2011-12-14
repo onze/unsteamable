@@ -9,6 +9,8 @@
 
 #include <Unsteamable.h>
 #include <Level.h>
+#include <Debug.h>
+#include <tools/File.h>
 
 using namespace std;
 
@@ -27,14 +29,15 @@ void Unsteamable::run()
 
 	int width = 800, height = 600;
 	mEngine->init("plugins.cfg", false, width, height, "Unsteamable");
+	mEngine->setRootDir("/media/z2/python/1105/weld_testing_folder");
 
 	//TODO: intro cinematic
 	//TODO: menu: play/options
 	//TODO: for level in levels:
 
 	//load next level
-	cout << "load level" << endl;
 	Steel::Level *level = mEngine->createLevel("MyLevel");
+	level->load();
 	if (level == NULL)
 		Debug::log("could not load level.").endl();
 
