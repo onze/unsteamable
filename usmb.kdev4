@@ -1,0 +1,4 @@
+[Project]
+Name=usmb
+Manager=KDevCMakeManager
+VersionControl=kdevgit
