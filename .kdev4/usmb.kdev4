@@ -1,0 +1,48 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x08\x00u\x00s\x00m\x00b)
+
+[CMake]
+BuildDirs=/media/a0/cpp/1210/usmb/build
+CMakeDir=/usr/share/cmake-2.8/Modules
+Current CMake Binary=file:///usr/bin/cmake
+CurrentBuildDir=file:///media/a0/cpp/1210/usmb/build
+CurrentBuildType=Debug
+CurrentInstallDir=file:///usr/local
+Environment Profile=Debug
+Extra Arguments=
+ProjectRootRelative=./
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=New Native Application Configuration
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=
+Debugger Shell=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Build
+Display Demangle Names=true
+Display Static Members=false
+EnvironmentGroup=Debug
+Executable=file:///media/a0/cpp/1210/usmb/build/bin/Debug/usmb
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+GDB Path=gdb
+Project Target=usmb,usmb
+Remote GDB Config Script=
+Remote GDB Run Script=
+Remote GDB Shell Script=
+Use External Terminal=false
+Working Directory=file:///media/a0/cpp/1210/usmb/install_dir
+isExecutable=true
+
+[MakeBuilder]
+Default Make Environment Profile=Debug
+Number Of Jobs=7
+
+[Project]
+VersionControlSupport=kdevgit
