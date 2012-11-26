@@ -1,0 +1,23 @@
+<rml>
+    <head>
+        <title>Demo</title>
+        <!--link type="text/template" href="window.rml" /-->
+        <style>
+            body
+            {
+                width: 300px;
+                height: 225px;
+                
+                margin: auto;
+
+                font-family: Tahoma;
+
+            }
+        </style>
+    </head>
+<!--     <body template="window"> -->
+    <body>
+        <font color="white">In white</font>
+        <font color="black">In black</font>
+    </body>
+</rml>

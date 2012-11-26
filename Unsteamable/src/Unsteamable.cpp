@@ -27,14 +27,17 @@ void Unsteamable::run()
 {
     cout << "Unsteamable::run()" << endl;
 
-    int width = 1280, height = 968;
+    unsigned int width = 1280, height = 968;
     mEngine->init("plugins.cfg", false, width, height, "Unsteamable");
     mEngine->setRootDir(Steel::File::getCurrentDirectory());
+
+    mEngine->startEditMode();
 
     //TODO: intro cinematic
     //TODO: menu: play/options
     //TODO: for level in levels:
 
+    //while (has next level)
     //load next level
     Steel::Level *level = mEngine->createLevel("PG01-dev");
     level->load();
@@ -43,6 +46,6 @@ void Unsteamable::run()
     mEngine->mainLoop();
     //TODO: ending cinematic
     //credits
-    Debug::log("run over. (a child)").endl();
+    Debug::log("usmb done, exiting now.").endl();
 }
 // kate: indent-mode cstyle; indent-width 4; replace-tabs on; 
