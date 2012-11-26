@@ -1,5 +1,3 @@
-.directory
-*.log
 *~
-Debug/*
-Release/*
+build
+*.orig
