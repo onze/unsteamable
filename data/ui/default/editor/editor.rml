@@ -1,0 +1,38 @@
+<rml>
+    <head>
+        <title>usmb::editor</title>
+<!--         <link rel="stylesheet" type="text/css" href="editor.css"></link> -->
+
+        <style rel="stylesheet" type="text/css">
+
+body
+{
+    font-family: Tahoma;
+
+}
+div {
+    font-family: Tahoma;
+}
+
+.editor_menu {
+    position:fixed;
+    top:50px;
+    right:5px;
+    width:25%;
+
+/*     float:right; */
+/*     padding-right:50px; */
+/*     width:auto; */
+    background-color:#ccc000;
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="editor_menu">
+        iop<br/>
+        tralala
+        </div>
+<!--         <button class="editor_btn" onclick="iop">click here</button> -->
+    </body>
+</rml>

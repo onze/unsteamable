@@ -1,0 +1,28 @@
+
+.button_classname {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+    background-color:#cccccc;
+    -moz-border-radius:14px;
+    -webkit-border-radius:14px;
+    border-radius:14px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    color:#777777;
+    font-family:arial;
+    font-size:12px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #ffffff;
+    font-family: Tahoma;
+
+}.button_classname:hover {
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+    background-color:#dfdfdf;
+}.button_classname:active {
+    position:relative;
+    top:1px;
+}
