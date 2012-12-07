@@ -4,35 +4,157 @@
 <!--         <link rel="stylesheet" type="text/css" href="editor.css"></link> -->
 
         <style rel="stylesheet" type="text/css">
+        body
+        {
+            font-family: Tahoma;
 
-body
-{
-    font-family: Tahoma;
+        }
+        
+        div {
+            font-family: Tahoma;
+        }
 
-}
-div {
-    font-family: Tahoma;
-}
+        editor {
+            background-color:#ffffff;
+            height:100%;
+            width:100%;
+        }
+        
+        editor menu {
+            float:right;
+            /*top, right, bottom, left*/
+            margin:50px 20px 0px 0px;
+            width:25%;
+            /*slightly darker than widgets background*/
+            background-color:#112233;
+        }
+        
+        editor menu widget {
+            float:right;
+            margin-top:1px;
+/*             margin: 2px 2px 2px 2px; */
+            background-color:#111122;
+        }
 
-.editor_menu {
-    position:fixed;
-    top:50px;
-    right:5px;
-    width:25%;
+        editor menu widget title {
+            float:left;
+            text-align:center;
+            border-top-width:0px;
+            border-top-color:black;
+            border-bottom-width:0px;
+            border-bottom-color:black;
+            background-color:#225599;
+        }
 
-/*     float:right; */
-/*     padding-right:50px; */
-/*     width:auto; */
-    background-color:#ccc000;
-}
+        editor menu widget content {
+            float:left;
+            margin-left:5px;
+            margin-right:5px;
+        }
 
+        editor menu widget content item {
+            float:left;
+            drag:drag;
+            border-bottom-width:1px;
+            border-bottom-color:black;
+            background-color:#112255;
+        }
+        
+        editor menu widget content item:hover {
+            background-color:#223366;
+        }
+
+        editor menu widget content button {
+            float:left;
+            text-align:center;
+            width:32%;
+            background-color:#112255;
+        }
+
+        editor menu widget content button:hover {
+            background-color:#223366;
+        }
+
+        tabset tab {
+            text-align:center;
+            border-width:1px;
+            border-color:black;
+            width:32%;
+            background-color:#ffbb33;
+        }
+
+        tabset tab:hover {
+            background-color:#ffcc44;
+        }
+
+        tabset panel {
+            display: block;
+        }
+        
         </style>
     </head>
     <body>
-        <div class="editor_menu">
-        iop<br/>
-        tralala
-        </div>
-<!--         <button class="editor_btn" onclick="iop">click here</button> -->
+    <editor>
+        <menu>
+        <tabset>
+            <!--TODO:doc !-->
+            <tab>File</tab>
+            <panel>
+                <widget>
+                    <title>Level</title>
+                    <content>
+                        <button onclick="engine.level.save">save</button>
+                        <button onclick="engine.level.load">delete</button>
+                        <button onclick="engine.new_level">new</button>
+                        <input type="text" id="new_level_name">level name...</input>
+                    </content>
+                </widget>
+                <widget>
+                    <title>Other</title>
+                    <content>
+                        <item class="dir" location="rel/path">item 1</item>
+                        <item class="dir" location="rel/path">item 2</item>
+                        <item class="dir" location="rel/path">item 3</item>
+                    </content>
+                </widget>
+            </panel>
+            <tab>Edit</tab>
+            <panel>
+                <widget>
+                    <title>On Disk</title>
+                    <content>
+                        <item class="dir" location="rel/path">item 1</item>
+                        <item class="dir" location="rel/path">item 2</item>
+                        <item class="dir" location="rel/path">item 3</item>
+                    </content>
+                </widget>
+                <widget>
+                    <title>In Game</title>
+                    <content>
+                        <item class="dir" location="rel/path">item 1</item>
+                        <item class="dir" location="rel/path">item 2</item>
+                        <item class="dir" location="rel/path">item 3</item>
+                    </content>
+                </widget>
+            </panel>
+            <!--TODO:doc !-->
+            <tab>Options</tab>
+            <panel>
+                <widget>
+                    <title>Gameplay</title>
+                    <content>
+                        <item>my setting</item>
+                    </content>
+                </widget>
+                <widget>
+                    <title>Graphics</title>
+                    <content>
+                        <item>my setting</item>
+                    </content>
+                </widget>
+                </panel>
+        </tabset>
+        </menu>
+    </editor>
     </body>
 </rml>

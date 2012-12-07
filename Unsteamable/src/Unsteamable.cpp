@@ -42,7 +42,8 @@ void Unsteamable::run()
     Steel::Level *level = mEngine->createLevel("PG01-dev");
     level->load();
 
-    Debug::log("launching main loop").endl();
+    Debug::log("starting main loop").endl();
+    
     mEngine->mainLoop();
     //TODO: ending cinematic
     //credits
