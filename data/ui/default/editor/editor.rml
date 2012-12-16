@@ -9,6 +9,7 @@
             font-family: Tahoma;
             margin:0;
             padding:0;
+            height:100%;
             background-color:transparent;
             color:white;
         }
@@ -116,7 +117,7 @@
 
         resourceitem {
             color:white;
-            drag:drag;
+            drag:clone;
             display: block;
         }
 
@@ -146,7 +147,7 @@
 
         spacer {
             display: inline-block;
-            width: 25px;
+            width: 10px;
         }
         
         </style>
