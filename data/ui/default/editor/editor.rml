@@ -7,11 +7,10 @@
         body
         {
             font-family: Tahoma;
-
-        }
-        
-        div {
-            font-family: Tahoma;
+            margin:0;
+            padding:0;
+            background-color:transparent;
+            color:white;
         }
 
         editor {
@@ -30,7 +29,7 @@
         }
         
         editor menu widget {
-            float:right;
+/*             float:right; */
             margin-top:1px;
 /*             margin: 2px 2px 2px 2px; */
             background-color:#111122;
@@ -54,7 +53,6 @@
 
         editor menu widget content item {
             float:left;
-            drag:drag;
             border-bottom-width:1px;
             border-bottom-color:black;
             background-color:#112255;
@@ -74,12 +72,11 @@
         editor menu widget content button:hover {
             background-color:#223366;
         }
-
+        
         tabset tab {
             text-align:center;
-            border-width:1px;
             border-color:black;
-            width:32%;
+            width:33.3%;
             background-color:#ffbb33;
         }
 
@@ -90,70 +87,127 @@
         tabset panel {
             display: block;
         }
+
+        datagrid {
+            width:100%;
+            display:block;
+            background:black;
+            color:black;
+        }
+        
+        datagrid datagridheader {
+            height:0px;
+        }
+
+        datagrid datagridbody
+        {
+            width:100%;
+            color: black;
+        }
+
+        datagrid datagridrow {
+            width:100%;
+        }
+
+        datagridcell {
+            background:gray;
+            width:100%;
+        }
+
+        resourceitem {
+            color:white;
+            drag:drag;
+            display: block;
+        }
+
+        resourceitem datagridexpand {
+            display: inline-block;
+            pic-decorator: image;
+            pic-image-src: images/arrow-right.png;
+            width: 16px;
+            height: 16px;
+        }
+
+        resourceitem directory_inode {
+            display: inline-block;
+            pic-decorator: image;
+            pic-image-src: images/inode-directory.png;
+            width: 16px;
+            height: 16px;
+        }
+
+        resourceitem regular_inode {
+            display: inline-block;
+            pic-decorator: image;
+            pic-image-src: images/unknown.png;
+            width: 16px;
+            height: 16px;
+        }
+
+        spacer {
+            display: inline-block;
+            width: 25px;
+        }
         
         </style>
     </head>
     <body>
     <editor>
         <menu>
-        <tabset>
-            <!--TODO:doc !-->
-            <tab>File</tab>
-            <panel>
-                <widget>
-                    <title>Level</title>
-                    <content>
-                        <button onclick="engine.level.save">save</button>
-                        <button onclick="engine.level.load">delete</button>
-                        <button onclick="engine.new_level">new</button>
-                        <input type="text" id="new_level_name">level name...</input>
-                    </content>
-                </widget>
-                <widget>
-                    <title>Other</title>
-                    <content>
-                        <item class="dir" location="rel/path">item 1</item>
-                        <item class="dir" location="rel/path">item 2</item>
-                        <item class="dir" location="rel/path">item 3</item>
-                    </content>
-                </widget>
-            </panel>
-            <tab>Edit</tab>
-            <panel>
-                <widget>
-                    <title>On Disk</title>
-                    <content>
-                        <item class="dir" location="rel/path">item 1</item>
-                        <item class="dir" location="rel/path">item 2</item>
-                        <item class="dir" location="rel/path">item 3</item>
-                    </content>
-                </widget>
-                <widget>
-                    <title>In Game</title>
-                    <content>
-                        <item class="dir" location="rel/path">item 1</item>
-                        <item class="dir" location="rel/path">item 2</item>
-                        <item class="dir" location="rel/path">item 3</item>
-                    </content>
-                </widget>
-            </panel>
-            <!--TODO:doc !-->
-            <tab>Options</tab>
-            <panel>
-                <widget>
-                    <title>Gameplay</title>
-                    <content>
-                        <item>my setting</item>
-                    </content>
-                </widget>
-                <widget>
-                    <title>Graphics</title>
-                    <content>
-                        <item>my setting</item>
-                    </content>
-                </widget>
+            <tabset>
+                <!--TODO:doc !-->
+                <tab>File</tab>
+                <panel>
+                    <widget>
+                        <title>Level</title>
+                        <content>
+                            <button onclick="engine.level.save">save</button>
+                            <button onclick="engine.level.load">new / load</button>
+                            <button onclick="engine.level.delete">delete</button>
+                            <input type="text" onsubmit="level_name submission" id="level_name"/>
+                        </content>
+                    </widget>
+                    <widget>
+                        <title>Other</title>
+                        <content>
+                            <item class="dir" location="rel/path">item 1</item>
+                            <item class="dir" location="rel/path">item 2</item>
+                            <item class="dir" location="rel/path">item 3</item>
+                        </content>
+                    </widget>
                 </panel>
-        </tabset>
+
+                <!--TODO: doc !-->
+                <tab id="editor_menu_tab_edit">Edit</tab>
+                <panel>
+                    <widget>
+                        <title>On Disk</title>
+                        <content>
+                            <datagrid source="resources.$root">
+                                <col fields="ext,filename,fullpath,#num_children" width="100%" formatter="resources"/>
+                            </datagrid>
+                        </content>
+                    </widget>
+                </panel>
+
+                <!--TODO:doc !-->
+                <tab>Options</tab>
+                <panel>
+                    <widget>
+                        <title>Gameplay</title>
+                        <content>
+                            <item>my setting</item>
+                            <item class="dir" location="rel/path">item 1</item>
+                        </content>
+                    </widget>
+                    <widget>
+                        <title>Graphics</title>
+                        <content>
+                            <item>my setting</item>
+                        </content>
+                    </widget>
+                    </panel>
+            </tabset>
         </menu>
     </editor>
     </body>

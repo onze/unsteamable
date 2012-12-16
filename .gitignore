@@ -5,3 +5,4 @@ install_dir
 *.log
 install_dir/
 data/ui/default/editor/palette*
+*.kate-swp

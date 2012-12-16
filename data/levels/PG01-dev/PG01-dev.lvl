@@ -1,0 +1,11 @@
+{
+   "agents" : null,
+   "camera" : {
+      "position" : "74.32 877.02 -136.425",
+      "rotation" : "-0.792442 0.464341 -0.342096 -0.20045"
+   },
+   "models" : {
+      "MT_OGRE" : null
+   },
+   "name" : "PG01-dev"
+}
