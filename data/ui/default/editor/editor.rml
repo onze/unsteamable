@@ -1,179 +1,41 @@
 <rml>
     <head>
         <title>usmb::editor</title>
-<!--         <link rel="stylesheet" type="text/css" href="editor.css"></link> -->
+        <link rel="stylesheet" type="text/css" href="editor.css"></link>
 
         <style rel="stylesheet" type="text/css">
-        body
-        {
-            font-family: Tahoma;
-            margin:0;
-            padding:0;
-            height:100%;
-            background-color:transparent;
-            color:white;
-        }
 
-        editor {
-            background-color:#ffffff;
-            height:100%;
-            width:100%;
-        }
-        
-        editor menu {
-            float:right;
-            /*top, right, bottom, left*/
-            margin:50px 20px 0px 0px;
-            width:25%;
-            /*slightly darker than widgets background*/
-            background-color:#112233;
-        }
-        
-        editor menu widget {
-/*             float:right; */
-            margin-top:1px;
-/*             margin: 2px 2px 2px 2px; */
-            background-color:#111122;
-        }
-
-        editor menu widget title {
-            float:left;
-            text-align:center;
-            border-top-width:0px;
-            border-top-color:black;
-            border-bottom-width:0px;
-            border-bottom-color:black;
-            background-color:#225599;
-        }
-
-        editor menu widget content {
-            float:left;
-            margin-left:5px;
-            margin-right:5px;
-        }
-
-        editor menu widget content item {
-            float:left;
-            border-bottom-width:1px;
-            border-bottom-color:black;
-            background-color:#112255;
-        }
-        
-        editor menu widget content item:hover {
-            background-color:#223366;
-        }
-
-        editor menu widget content button {
-            float:left;
-            text-align:center;
-            width:32%;
-            background-color:#112255;
-        }
-
-        editor menu widget content button:hover {
-            background-color:#223366;
-        }
-        
-        tabset tab {
-            text-align:center;
-            border-color:black;
-            width:33.3%;
-            background-color:#ffbb33;
-        }
-
-        tabset tab:hover {
-            background-color:#ffcc44;
-        }
-
-        tabset panel {
-            display: block;
-        }
-
-        datagrid {
-            width:100%;
-            display:block;
-            background:black;
-            color:black;
-        }
-        
-        datagrid datagridheader {
-            height:0px;
-        }
-
-        datagrid datagridbody
-        {
-            width:100%;
-            color: black;
-        }
-
-        datagrid datagridrow {
-            width:100%;
-        }
-
-        datagridcell {
-            background:gray;
-            width:100%;
-        }
-
-        resourceitem {
-            color:white;
-            drag:clone;
-            display: block;
-        }
-
-        resourceitem datagridexpand {
-            display: inline-block;
-            pic-decorator: image;
-            pic-image-src: images/arrow-right.png;
-            width: 16px;
-            height: 16px;
-        }
-
-        resourceitem directory_inode {
-            display: inline-block;
-            pic-decorator: image;
-            pic-image-src: images/inode-directory.png;
-            width: 16px;
-            height: 16px;
-        }
-
-        resourceitem regular_inode {
-            display: inline-block;
-            pic-decorator: image;
-            pic-image-src: images/unknown.png;
-            width: 16px;
-            height: 16px;
-        }
-
-        spacer {
-            display: inline-block;
-            width: 10px;
-        }
         
         </style>
     </head>
     <body>
+    <span style="color:black;">
+<!--         <span style="margin-top:0px;margin-left:0px;width:100%;height:100%;">body</span> -->
+<!--         <span style="display:block;margin-bottom:20px;margin-rigth:20px;text-align:right;">footer&nbsp;</span> -->
+    </span>
     <editor>
-        <menu>
+        <menu id="menu">
+            <title>
+                <handle move_target="#document" style="display:block;">Menu</handle>
+            </title>
             <tabset>
                 <!--TODO:doc !-->
-                <tab>File</tab>
+                <tab>Steel</tab>
                 <panel>
                     <widget>
                         <title>Level</title>
                         <content>
-                            <button onclick="engine.level.save">save</button>
-                            <button onclick="engine.level.load">new / load</button>
-                            <button onclick="engine.level.delete">delete</button>
-                            <input type="text" onsubmit="level_name submission" id="level_name"/>
+                            <button style="width:32%;" onclick="engine.level.save">save</button>
+                            <button style="width:32%;" onclick="engine.level.load">new / load</button>
+                            <button style="width:32%;" onclick="engine.level.delete">delete</button>
+                            <input type="text" id="level_name"/>
                         </content>
                     </widget>
                     <widget>
-                        <title>Other</title>
+                        <title>Commands</title>
                         <content>
-                            <item class="dir" location="rel/path">item 1</item>
-                            <item class="dir" location="rel/path">item 2</item>
-                            <item class="dir" location="rel/path">item 3</item>
+                            <button style="width:50%;" onclick="resourceGroupsInfos">resource groups infos</button>
+                            <button style="width:50%;" onclick="">next button</button>
                         </content>
                     </widget>
                 </panel>
@@ -182,10 +44,10 @@
                 <tab id="editor_menu_tab_edit">Edit</tab>
                 <panel>
                     <widget>
-                        <title>On Disk</title>
+                        <title>Models</title>
                         <content>
-                            <datagrid source="resources.$root">
-                                <col fields="ext,filename,fullpath,#num_children" width="100%" formatter="resources"/>
+                            <datagrid source="models.$root">
+                                <col fields="ext,filename,fullpath,#num_children" width="100%" formatter="models"/>
                             </datagrid>
                         </content>
                     </widget>

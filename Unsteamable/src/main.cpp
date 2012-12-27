@@ -6,6 +6,43 @@
 #include "windows.h"
 #endif
 
+#ifdef __unix
+
+#include <stdio.h>
+#include <execinfo.h>
+#include <signal.h>
+#include <stdlib.h>
+
+void handler(int sig)
+{
+    void *array[10];
+    size_t size;
+
+    // get void*'s for all entries on the stack
+    size = backtrace(array, 10);
+
+    // print out all the frames to stderr
+    fprintf(stderr, "Error: signal %d:\n", sig);
+    backtrace_symbols_fd(array, size, 2);
+    exit(1);
+}
+
+void handler()
+{
+    void *trace_elems[20];
+    int trace_elem_count(backtrace( trace_elems, 20 ));
+    char **stack_syms(backtrace_symbols( trace_elems, trace_elem_count ));
+    for ( int i = 0 ; i < trace_elem_count ; ++i )
+    {
+        std::cout << stack_syms[i] << "\n";
+    }
+    free( stack_syms );
+
+    exit(1);
+}
+
+#endif
+
 #include "Unsteamable.h"
 #ifdef __cplusplus
 extern "C"
@@ -19,6 +56,10 @@ extern "C"
     int main ( int argc, char *argv[] )
 #endif
     {
+#ifdef __unix
+        std::set_terminate( handler );
+        signal(SIGSEGV, handler);
+#endif
         // Create application object
         Unsteamable usmb;
         try

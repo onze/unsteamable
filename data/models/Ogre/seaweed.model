@@ -1,0 +1,8 @@
+[
+    {
+        "modelType":"MT_OGRE",
+        "entityMeshName": "seaweed_00.mesh",
+        "position": "$dropTargetPosition",
+        "rotation": "$dropTargetRotation"
+    }
+]

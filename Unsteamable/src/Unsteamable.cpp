@@ -28,8 +28,8 @@ void Unsteamable::run()
     cout << "Unsteamable::run()" << endl;
 
     unsigned int width = 1280, height = 968;
-    mEngine->init("plugins.cfg", false, width, height, "Unsteamable");
     mEngine->setRootDir(Steel::File::getCurrentDirectory());
+    mEngine->init("plugins.cfg", false, width, height, "Unsteamable");
 
     mEngine->startEditMode();
 

@@ -1,37 +1,148 @@
-@import("../usbm.css");
+body {
+            font-family: Tahoma;
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+            background-color:transparent;
+            color:white;
+        }
 
-body
-{
-    font-family: Tahoma;
+        editor {
+            background-color:#112233;
+            height:100%;
+            width:100%;
+        }
 
-}
-div {
-    font-family: Tahoma;
-}
+        editor title {
+            display:block;
+            text-align:center;
+            color:white;
+        }
 
-.editor_menu {
-    float:right;
-    padding-right:50px;
-    width:auto;
-    background-color:#ccc000;
-}
-.editor_btn {
-    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-    box-shadow:inset 0px 1px 0px 0px #ffffff;
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-    background-color:#cccccc;
-    -moz-border-radius:14px;
-    -webkit-border-radius:14px;
-    border-radius:14px;
-    border:1px solid #dcdcdc;
-    display:inline-block;
-    color:#777777;
-    font-family:arial;
-    font-size:12px;
-    font-weight:bold;
-    padding:6px 24px;
-    text-decoration:none;
-    text-shadow:1px 1px 0px #ffffff;
-    font-family: Tahoma;
-}
+        editor menu {
+            float:right;
+            /*top, right, bottom, left*/
+            margin:50px 20px 0px 0px;
+            width:300;
+            /*slightly darker than widgets background*/
+            background-color:#112233;
+        }
+
+        editor menu widget {
+/*             float:right; */
+            margin-top:1px;
+/*             margin: 2px 2px 2px 2px; */
+            background-color:#111122;
+        }
+
+        editor menu widget title {
+            float:left;
+            text-align:center;
+            border-top-width:0px;
+            border-top-color:black;
+            border-bottom-width:0px;
+            border-bottom-color:black;
+            background-color:#225599;
+        }
+
+        editor menu widget content {
+            float:left;
+            margin-left:5px;
+            margin-right:5px;
+        }
+
+        editor menu widget content item {
+            float:left;
+            border-bottom-width:1px;
+            border-bottom-color:black;
+            background-color:#112255;
+        }
+
+        editor menu widget content item:hover {
+            background-color:#223366;
+        }
+
+        editor menu widget content button {
+            float:left;
+            text-align:center;
+            background-color:#112255;
+        }
+
+        editor menu widget content button:hover {
+            background-color:#223366;
+        }
+
+        tabset tab {
+            text-align:center;
+            border-color:black;
+            width:33.3%;
+            background-color:#ffbb33;
+        }
+
+        tabset tab:hover {
+            background-color:#ffcc44;
+        }
+
+        tabset panel {
+            display: block;
+        }
+
+        datagrid {
+            width:100%;
+            display:block;
+            background:black;
+            color:black;
+        }
+
+        datagrid datagridheader {
+            height:0px;
+        }
+
+        datagrid datagridbody {
+            width:100%;
+            color:black;
+        }
+
+        datagrid datagridrow {
+            width:100%;
+        }
+
+        datagridcell {
+            background:gray;
+            width:100%;
+        }
+
+        resourceitem {
+            color:white;
+            display: block;
+        }
+
+        resourceitem datagridexpand {
+            display: inline-block;
+            pic-decorator: image;
+            pic-image-src: images/arrow-right.png;
+            width: 16px;
+            height: 16px;
+        }
+
+        resourceitem directory_inode {
+            display: inline-block;
+            pic-decorator: image;
+            pic-image-src: images/inode-directory.png;
+            width: 16px;
+            height: 16px;
+        }
+
+        resourceitem regular_inode {
+            display: inline-block;
+            pic-decorator: image;
+            pic-image-src: images/unknown.png;
+            width: 16px;
+            height: 16px;
+        }
+
+        spacer {
+            display: inline-block;
+            width: 16px;
+        }
