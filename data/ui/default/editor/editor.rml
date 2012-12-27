@@ -18,7 +18,7 @@
             <title>
                 <handle move_target="#document" style="display:block;">Menu</handle>
             </title>
-            <tabset>
+            <tabset id="editor_tabset">
                 <!--TODO:doc !-->
                 <tab>Steel</tab>
                 <panel>
@@ -46,9 +46,9 @@
                     <widget>
                         <title>Level</title>
                         <content>
-                            <img onclick="editmode.translate" width="32" height="32" src="images/ico_move_gizmo.gif"/>
-                            <img onclick="editmode.rotate" width="32" height="32" src="images/ico_rotate_gizmo.gif"/>
-                            <img onclick="editmode.scale" width="32" height="32" src="images/ico_scale_gizmo.gif"/>
+                            <img onclick="editmode.translate" width="32" height="32" src="images/ico_move_gizmo.png"/>
+                            <img onclick="editmode.rotate" width="32" height="32" src="images/ico_rotate_gizmo.png"/>
+                            <img onclick="editmode.scale" width="32" height="32" src="images/ico_scale_gizmo.png"/>
                         </content>
                     </widget>
                     <widget>
