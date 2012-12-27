@@ -44,6 +44,14 @@
                 <tab id="editor_menu_tab_edit">Edit</tab>
                 <panel>
                     <widget>
+                        <title>Level</title>
+                        <content>
+                            <img onclick="editmode.translate" width="32" height="32" src="images/ico_move_gizmo.gif"/>
+                            <img onclick="editmode.rotate" width="32" height="32" src="images/ico_rotate_gizmo.gif"/>
+                            <img onclick="editmode.scale" width="32" height="32" src="images/ico_scale_gizmo.gif"/>
+                        </content>
+                    </widget>
+                    <widget>
                         <title>Models</title>
                         <content>
                             <datagrid source="models.$root">
