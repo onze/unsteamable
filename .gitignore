@@ -6,3 +6,4 @@ install_dir
 install_dir/
 data/ui/default/editor/palette*
 *.kate-swp
+*.autosave

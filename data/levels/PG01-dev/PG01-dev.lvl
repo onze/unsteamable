@@ -2,28 +2,26 @@
    "agents" : {
       "0" : {
          "MT_OGRE" : "0"
-      },
-      "1" : {
-         "MT_OGRE" : "1"
       }
    },
+   "ambientLight" : "1 1 1 1",
    "camera" : {
-      "position" : "224.012 986.206 -113.638",
-      "rotation" : "0.569515 -0.19 0.116969 0.791147"
+      "position" : "-22.5436 268.042 220.599",
+      "rotation" : "0.923079 -0.18059 -0.33326 -0.0651925"
    },
    "models" : {
       "MT_OGRE" : {
          "0" : {
             "entityMeshName" : "seaweed_00.mesh",
-            "position" : "227.138 980.449 -128.584",
-            "rotation" : "0.418102 -0.580121 0.408715 0.567101"
-         },
-         "1" : {
-            "entityMeshName" : "seaweed_00.mesh",
-            "position" : "226.631 982.515 -122.612",
-            "rotation" : "0.569503 -0.189996 0.116967 0.79113"
+            "position" : "-7.00919 250.558 198.906",
+            "rotation" : "0.992508 -0.122183 0 0"
          }
       }
    },
-   "name" : "PG01-dev"
+   "name" : "PG01-dev",
+   "terrain" : {
+      "diffuseColor" : "1 1 1 1",
+      "lightDir" : "0.562809 -0.306987 0.767467",
+      "specularColor" : "0.4 0.4 0.4 1"
+   }
 }
