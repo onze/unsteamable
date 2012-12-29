@@ -4,9 +4,13 @@
         <link rel="stylesheet" type="text/css" href="editor.css"></link>
         <style rel="stylesheet" type="text/css">
 
+img.btn_icon {
+    width:32px;
+    height:32px;
+}
         </style>
     </head>
-    <body onload="restore">
+    <body>
     <span style="color:black;">
 <!--         <span style="margin-top:0px;margin-left:0px;width:100%;height:100%;">body</span> -->
 <!--         <span style="display:block;margin-bottom:20px;margin-rigth:20px;text-align:right;">footer&nbsp;</span> -->
@@ -42,26 +46,29 @@
                 <tab id="editor_menu_tab_edit">Edit</tab>
                 <panel>
                     <widget>
-                        <title>Level</title>
+                        <title>Edit mode</title>
                         <content>
-                            <img onclick="editmode.translate" width="32" height="32" src="images/ico_move_gizmo.png"/>
-                            <img onclick="editmode.rotate" width="32" height="32" src="images/ico_rotate_gizmo.png"/>
-                            <img onclick="editmode.scale" width="32" height="32" src="images/ico_scale_gizmo.png"/>
+                            <img class="btn_icon" onclick="editmode.translate" src="images/ico_move_gizmo.png"/>
+                            <img class="btn_icon" onclick="editmode.rotate" src="images/ico_rotate_gizmo.png"/>
+                            <img class="btn_icon" onclick="editmode.scale" src="images/ico_scale_gizmo.png"/>
+                            <img class="btn_icon" onclick="editmode.terraform" src="images/ico_terraform_gizmo.png"/>
                         </content>
                     </widget>
+                    
+<!--                     checked="true" to start checked-->
+<!--                     <input id="terrain_edit_mode" type="checkbox" value="true"/> Edit terrain<br/> -->
+<!--                     radio buttons have to be in the same form to (de)activate each other -->
+<!--                     <form> -->
+<!--                         <input name="editmode" type="radio" value="models" checked="true"/>Models -->
+<!--                         <input name="editmode" type="radio" value="terrain"/>Terrain -->
+<!--                         <br/> -->
+<!--                     </form> -->
                     <widget>
                         <title>Models</title>
                         <content>
                             <datagrid source="models.$root">
                                 <col fields="ext,filename,fullpath,#num_children" width="100%" formatter="models"/>
                             </datagrid>
-                        </content>
-                    </widget>
-                    <widget>
-                        <title>Terrain</title>
-                        <content>
-                            <!--checked="true" to start checked-->
-                            <input id="terrain_edit_mode" type="checkbox" value="true"/> Edit terrain<br/>
                         </content>
                     </widget>
                 </panel>
